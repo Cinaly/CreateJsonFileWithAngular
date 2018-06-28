@@ -54,15 +54,17 @@ function filterHtml(html) {
     var reg = /\{\{\s*[\'\"][^{}|]*[\'\"]\s*\|\s*translate\s*\}\}/g; //正则查找{{ 'XXX' | translate }}
     var str = html.toString();
     var arr = str.match(reg); //找到所有匹配的内容
-    for(var i=0;i<arr.length;i++){  //将匹配到的内容进行遍历
-        var ss = arr[i].replace('{{','').replace('}}','').replace('translate','').replace('|','')
-            .replace('\n','').replace('\r','').replace(/\t+/g,' ').trim(); //将{{,}},|,translate,换行符,制表符 替换掉,并去掉空格
-        var ccEn;
-        var key = ss.substring(1,ss.length-1); //去掉首末单双引号
-        if(jsonArr.indexOf(key)==-1){ //判断是否已经存在该key
-            jsonArr.push(key);
-            ccEn = '  "' + key + '":"' + key + '",' + '\r';  //字符串拼接成正确的json字符串
-            jsonStrEn += ccEn;
+    if(arr&&arr.length>0){
+        for(var i=0;i<arr.length;i++){  //将匹配到的内容进行遍历
+            var ss = arr[i].replace('{{','').replace('}}','').replace('translate','').replace('|','')
+                .replace('\n','').replace('\r','').replace(/\t+/g,' ').trim(); //将{{,}},|,translate,换行符,制表符 替换掉,并去掉空格
+            var ccEn;
+            var key = ss.substring(1,ss.length-1); //去掉首末单双引号
+            if(jsonArr.indexOf(key)==-1){ //判断是否已经存在该key
+                jsonArr.push(key);
+                ccEn = '  "' + key + '":"' + key + '",' + '\r';  //字符串拼接成正确的json字符串
+                jsonStrEn += ccEn;
+            }
         }
     }
 }
