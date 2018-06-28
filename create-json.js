@@ -4,7 +4,10 @@ var path = require('path');//解析需要遍历的文件夹
 
 // 定义目标地址
 var dirPath = readlineSync.question('please input your dictionary?  ');
-
+if(!dirPath){
+    console.log('文件夹名字不能为空!!');
+    return false;
+}
 var jsonStrEn = '{\r'; // 写入到json文件里的内容
 var jsonArr = [];  //创建一个数组用来存json的key字段
 
@@ -18,7 +21,7 @@ function getData(str) {
 function fileDisplay(filePath) {
     fs.readdir(filePath, function (err, files) {
         if (err) {
-            console.warn(err);
+            console.log('不存在该文件夹!!');
         } else {
             //遍历读取到的文件列表
             for(var i=0;i<files.length;i++){
