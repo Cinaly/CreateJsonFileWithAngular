@@ -5,9 +5,6 @@ var fs = require('fs');
 var readlineSync = require('readline-sync');
 var path = require('path');//解析需要遍历的文件夹
 
-// Cheerio 是一个Node.js的库， 它可以从html的片断中构建DOM结构，然后提供像jquery一样的css选择器查询
-var cheerio = require('cheerio');
-
 // 定义目标地址
 var dirPath = readlineSync.question('please input your dictionary?  ');
 
@@ -73,10 +70,6 @@ function CheckUrl(str) {
 }
 
 function filterHtml(html) {
-    // 沿用JQuery风格，定义$
-    var $ = cheerio.load(html);
-    fs.writeFile('./en.html', html);
-    
     if (!fs.existsSync('./'+dirPath+'/json')) {
         fs.mkdirSync('./'+dirPath+'/json/');
     }
