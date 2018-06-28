@@ -46,7 +46,8 @@ function filterHtml(html) {
         fs.mkdirSync('./'+dirPath+'/json/');
     }
     
-    var reg = /\{\{\s*[\'\"][^{}|]*[\'\"]\s*\|\s*translate\s*\}\}/g; //正则查找{{ 'XXX' | translate }}
+//    var reg = /\{\{\s*[\'\"][^{}|]*[\'\"]\s*\|\s*translate(\s*|)\}\}/g; //正则查找{{ 'XXX' | translate }}
+    var reg = /\{\{\s*[\'\"][^{}|]*[\'\"]\s*\|\s*translate/g; //正则查找{{ 'XXX' | translate
     var str = html.toString();
     var arr = str.match(reg); //找到所有匹配的内容
     if(arr&&arr.length>0){
@@ -63,3 +64,4 @@ function filterHtml(html) {
         }
     }
 }
+
