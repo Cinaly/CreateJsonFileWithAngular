@@ -52,7 +52,8 @@ function filterHtml(html) {
     var str = html.toString();
     var arr = str.match(reg); //找到所有匹配的内容
     for(var i=0;i<arr.length;i++){  //将匹配到的内容进行遍历
-        var ss = arr[i].replace('{{','').replace('}}','').replace('translate','').replace('|','').trim(); //将{{,}},|,translate 替换成'',并去掉空格
+        var ss = arr[i].replace('{{','').replace('}}','').replace('translate','').replace('|','')
+            .replace('\n','').replace('\r','').replace(/\t+/g,' ').trim(); //将{{,}},|,translate,换行符,制表符 替换掉,并去掉空格
         var ccEn;
         var key = ss.substring(1,ss.length-1); //去掉首末单双引号
         if(jsonArr.indexOf(key)==-1){ //判断是否已经存在该key
