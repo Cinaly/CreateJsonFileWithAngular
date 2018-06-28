@@ -1,6 +1,3 @@
-//加载http模块
-var http = require('http');
-
 var fs = require('fs');
 var readlineSync = require('readline-sync');
 var path = require('path');//解析需要遍历的文件夹
@@ -8,28 +5,13 @@ var path = require('path');//解析需要遍历的文件夹
 // 定义目标地址
 var dirPath = readlineSync.question('please input your dictionary?  ');
 
-var jsonStrEn = '{\r';
-var jsonArr = [];
+var jsonStrEn = '{\r'; // 写入到json文件里的内容
+var jsonArr = [];  //创建一个数组用来存json的key字段
+
 getData(dirPath);
 
 function getData(str) {
-    if (CheckUrl(str)) {
-        http.get(str, function (res) {
-            var html = '';
-            // 获取页面数据
-            res.on('data', function (data) {
-                html += data;
-            });
-            // 数据获取结束
-            res.on('end', function () {
-                filterHtml(html);
-            });
-        }).on('error', function () {
-            console.log('获取数据出错！');
-        });
-    } else {
-        fileDisplay(str);
-    }
+    fileDisplay(str);
 }
 
 //文件遍历方法
@@ -44,15 +26,15 @@ function fileDisplay(filePath) {
                 //获取当前文件的绝对路径
                 var filedir = path.join(filePath, filename);
                 console.log('-----',filedir);
-                var data = fs.statSync('./'+ filedir);
+                var data = fs.statSync('./'+ filedir); //同步读取文件的状态
                 console.log(data.isFile());
-                if(data.isFile()){
-                    var temp = fs.readFileSync('./'+ filedir);
+                if(data.isFile()){ //判断是否是文件
+                    var temp = fs.readFileSync('./'+ filedir); //同步读取文件内容
                     filterHtml(temp);
                 }
             }
             
-            jsonStrEn = jsonStrEn.substring(0,jsonStrEn.length-2);
+            jsonStrEn = jsonStrEn.substring(0,jsonStrEn.length-2); //去掉末尾的,号和换行
             console.log(jsonArr);
             createJsonFile(jsonStrEn+"\r}");
         }
@@ -60,35 +42,27 @@ function fileDisplay(filePath) {
     
 }
 
-function CheckUrl(str) {
-    var RegUrl = new RegExp();
-    RegUrl.compile('^[A-Za-z]+://[A-Za-z0-9-_]+\\.[A-Za-z0-9-_%&\?\/.=]+$');
-    if (!RegUrl.test(str)) {
-        return false;
-    }
-    return true;
-}
-
 function filterHtml(html) {
+    //判断是否存在文件夹
     if (!fs.existsSync('./'+dirPath+'/json')) {
         fs.mkdirSync('./'+dirPath+'/json/');
     }
     
-    var reg = /\{\{\s*[\'\"].*[\'\"]\s*\|\s*translate\s*\}\}/g;
+    var reg = /\{\{\s*[\'\"].*[\'\"]\s*\|\s*translate\s*\}\}/g; //正则查找{{ 'XXX' | translate }}
     var str = html.toString();
-    var arr = str.match(reg);
-    for(var i=0;i<arr.length;i++){
-        var ss = arr[i].replace('{{','').replace('}}','').replace('translate','').replace('|','').trim();
+    var arr = str.match(reg); //找到所有匹配的内容
+    for(var i=0;i<arr.length;i++){  //将匹配到的内容进行遍历
+        var ss = arr[i].replace('{{','').replace('}}','').replace('translate','').replace('|','').trim(); //将{{,}},|,translate 替换成'',并去掉空格
         var ccEn;
-        var key = ss.substring(1,ss.length-1);
-        if(jsonArr.indexOf(key)==-1){
+        var key = ss.substring(1,ss.length-1); //去掉首末单双引号
+        if(jsonArr.indexOf(key)==-1){ //判断是否已经存在该key
             jsonArr.push(key);
-            ccEn = '  "' + key + '":"' + key + '",' + '\r';
+            ccEn = '  "' + key + '":"' + key + '",' + '\r';  //字符串拼接成正确的json字符串
             jsonStrEn += ccEn;
         }
     }
 }
 
 function createJsonFile(jsonStrEn) {
-    fs.writeFile('./'+dirPath+'/json/en.json',jsonStrEn);
+    fs.writeFile('./'+dirPath+'/json/en.json',jsonStrEn);  //将内容写入json文件
 }
