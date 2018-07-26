@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.9",
+    "xlsx": "^0.13.3"
   }
 }
