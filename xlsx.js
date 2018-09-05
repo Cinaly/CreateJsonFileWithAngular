@@ -1,9 +1,11 @@
 var xl = require('xlsx');
 var fs = require('fs');
 
-var fileName = './H5页面翻译.xlsx';
+var fileName = './' + process.argv.splice(2);
+
 // workbook 对象，指的是整份 Excel 文档。我们在使用 js-xlsx 读取 Excel 文档之后就会获得 workbook 对象。
 var workbook = xl.readFile(fileName);
+
 // 获取 Excel 中所有表名
 const sheetNames = workbook.SheetNames; // 返回 ['sheet1', 'sheet2']
 
@@ -31,9 +33,9 @@ for (var i = 0; i < length; i++) {
 }
 
 for (var i = 0; i < length; i++) {
-    var jsonKey = jsonData[i]['EN'];
+    var jsonKey = jsonData[i]['EN'].replace(/\r\n/g, '');
     var jsonValue = jsonData[i]['EN'];
-    jsonValue = jsonValue.replace(/\bX\b/g, '{value}');
+    jsonValue = jsonValue.replace(/\bX\b/g, '{value}').replace(/\r\n/g, '');
     
     jsonObj['EN'][jsonKey] = jsonValue;
     if (jsonData[i]['AR']) {
@@ -70,7 +72,8 @@ if (jsonObj['RU']) {
     fs.writeFile('./json/ru.json', JSON.stringify(jsonObj['RU'], null, 4));
 }
 
+/*
 fs.unlink(fileName, function (err) {
     if (err) return console.log(err);
     console.log('文件删除成功');
-})
+})*/
