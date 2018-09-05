@@ -10,6 +10,12 @@ const worksheet = workbook.Sheets[sheetNames[0]];
 //返回json数据
 var jsonData = xl.utils.sheet_to_json(worksheet);
 
+console.log(sheetNames);
+//判断是否存在文件夹
+if (!fs.existsSync('./json')) {
+    fs.mkdirSync('./json/');
+}
+
 var length = jsonData.length;
 var jsonNameArr = [];
 var jsonObj = {};
@@ -45,9 +51,6 @@ for (var i = 0; i < length; i++) {
     }
 }
 
-console.log(jsonObj['EN']);
-
-
 fs.writeFile('./json/en.json', JSON.stringify(jsonObj['EN'], null, 4));
 if (jsonObj['AR']) {
     fs.writeFile('./json/ar.json', JSON.stringify(jsonObj['AR'], null, 4));
@@ -64,4 +67,3 @@ if (jsonObj['ID']) {
 if (jsonObj['RU']) {
     fs.writeFile('./json/ru.json', JSON.stringify(jsonObj['RU'], null, 4));
 }
-fs.writeFile('./json/test.json', JSON.stringify(jsonData, null, 4));
