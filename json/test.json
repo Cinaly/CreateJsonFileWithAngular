@@ -1,287 +1,56 @@
 [
     {
-        "EN": "Recharge Direction:",
-        "AR": "طريقة الشحن:",
-        "ID": "Panduan Isi Ulang:"
+        "EN": "Ship To:",
+        "AR": "الشحن الى:",
+        "ID": "Dikirim Ke:",
+        "FR": "Expédier vers:"
     },
     {
-        "EN": "1. Recharge this mobile, please tap \"Recharge This Mobile\" below.",
-        "AR": "١- لإعادة شحن هذا الجوال، يرجى النقر على \"شحن هذا الجوال\" أدناه.",
-        "ID": "1. Isi ulang ponsel ini, klik \"Isi Ulang Ponsel\" di bawah ini."
+        "EN": "Order Amount",
+        "AR": "مبلغ الطلب",
+        "ID": "Total Pesanan",
+        "FR": "Montant de la commande"
     },
     {
-        "EN": "2. Recharge other mobile, please copy PIN, then follow the following direction:",
-        "AR": "٢- لإعادة شحن جوال آخر ، يرجى نسخ رقم PIN هنا، ثم اتبع التوجيهات التالية:",
-        "ID": "2. Isi ulang ponsel lain, salin PIN, lalu ikuti panduan berikut:"
+        "EN": "Shipping Method",
+        "AR": "طريقة الشحن",
+        "ID": "Metode Pengiriman",
+        "FR": "Méthode d'expédition"
     },
     {
-        "EN": "Enter: *155* recharge PIN number#, then Dial",
-        "AR": "أدخل: * 155 * رقم PIN لإعادة الشحن ، ثم اتصل",
-        "ID": "Ketik *155*PIN isi ulang# lalu tekan panggil"
+        "EN": "Costs",
+        "AR": "التكاليف",
+        "ID": "Biaya",
+        "FR": "Coût"
     },
     {
-        "EN": "Enter:*1400* recharge PIN number#, then Dial",
-        "AR": "أدخل: * 1400 * رقم PIN لإعادة شحن ، ثم اتصل",
-        "ID": "Ketik *1400*PIN isi ulang# lalu tekan panggil"
+        "EN": "Delivery time",
+        "AR": "وقت التسليم",
+        "ID": "Waktu Pengiriman",
+        "FR": "Temps de livraison"
     },
     {
-        "EN": "Enter:*141* recharge PIN number#, then Dial",
-        "AR": "أدخل: * 141 * رقم PIN لإعادة الشحن ، ثم اتصل",
-        "ID": "Ketik *141*PIN isi ulang# lalu tekan panggil"
+        "EN": "COD not availabel.",
+        "AR": "الدفع عند الإستلام غير متوفرة",
+        "ID": "COD tidak tersedia.",
+        "FR": "Paiement à la livraison Indisponible."
     },
     {
-        "EN": "Enter:*155* recharge PIN number#, then Dial",
-        "AR": "أدخل: * 155 * رقم PIN لإعادة الشحن ، ثم اتصل",
-        "ID": "Ketik *155*PIN isi ulang# lalu tekan panggil"
+        "EN": "Note",
+        "AR": "ملاحظة",
+        "ID": "Nota",
+        "FR": "Remarque"
     },
     {
-        "EN": "Send SMS to 1100 containing \"V (space) Voucher number\"",
-        "AR": "أرسل رسالة قصيرة تحوي\"حرف V\" إلى الرقم 1100",
-        "ID": "SMS dengan format V (spasi) Nomor Voucher kirim ke 1100"
+        "EN": "Shipping Address",
+        "AR": "عنوان الشحن",
+        "ID": "Alamat Pengiriman",
+        "FR": "Adresse de livraison"
     },
     {
-        "EN": "Send SMS to 700212 containing \"PIN number\"",
-        "AR": "إرسال رسالة نصية تحتوي \"رقم الجوال\" إلى 700212",
-        "ID": "SMS dengan format \"Nomor PIN\" kirim ke 700212"
-    },
-    {
-        "EN": "Enter: *120* recharge PIN number#, then Dial",
-        "AR": "أدخل: * 120 * رقم PIN لإعادة الشحن ، ثم اتصل",
-        "ID": "Ketik *120*PIN isi ulang# lalu tekan panggil"
-    },
-    {
-        "EN": "Enter: *500* recharge PIN number#, then Dial.",
-        "AR": "أدخل: * 500 * رقم PIN لإعادة الشحن ، ثم اتصل.",
-        "ID": "Ketik *500*PIN isi ulang# lalu tekan panggil"
-    },
-    {
-        "EN": "Enter: *111* recharge PIN number#, then Dial",
-        "AR": "أدخل: * 111 * رقم PIN لإعادة الشحن ، ثم اتصل",
-        "ID": "Ketik *111*PIN isi ulang# lalu tekan panggil"
-    },
-    {
-        "EN": "Enter: *141* recharge PIN number#, then Dial",
-        "AR": "أدخل: * 141 * رقم PIN لإعادة الشحن ، ثم اتصل",
-        "ID": "Ketik *141*PIN isi ulang# lalu tekan panggil"
-    },
-    {
-        "EN": "Now to recharge your line. Launch the Jawwy app, go to \"My Account\" and enter the PIN number.",
-        "AR": "الآن لإعادة شحن الخط الخاص بك. قم بتشغيل تطبيق Jawwy ، وانتقل إلى \"حسابي\" وأدخل رقم PIN.",
-        "ID": "Untuk isi ulang pulsa Anda: Gunakan aplikasi Jawwy, masuk ke \"Akun Saya\" dan masukkan nomor PIN."
-    },
-    {
-        "EN": "The PIN code can be used for the recharge on App Store、iTunes、iBook from your Apple devices such as iPhone、iPad、iPod touch and Macbook. Open the corresponding APP, enter the code to complete the recharge.",
-        "AR": "يمكن استخدام رمز PIN لإعادة الشحن على App Store 、 iTunes 、 iBook من أجهزة Apple مثل iPhone و iPad و iPod touch و Macbook. افتح التطبيق المقابل ، أدخل الرمز لإكمال إعادة الشحن.",
-        "ID": "PIN juga dapat digunakan untuk melakukan isi ulang di App Store, iTunes, iBook melalui perangkat Apple Anda seperti iPhone, iPad, iPod touch atau Macbook. Buka aplikasi terkait lalu masukkan kode untuk melakukan pengisian ulang."
-    },
-    {
-        "EN": "1.Open the Google Play Store app.",
-        "AR": " افتح تطبيق متجر Google Play.",
-        "ID": "1. Buka aplikasi Google Play Store"
-    },
-    {
-        "EN": "2.Tap Menu then choose \"Redeem\".",
-        "AR": "٢- انقر القائمة ثم اختر \"Redeem\".",
-        "ID": "2. Pilih Menu lalu klik \"Redeem\""
-    },
-    {
-        "EN": "3.Enter your code.",
-        "AR": "٣- أدخل رمزك.",
-        "ID": "3. Masukkan kode"
-    },
-    {
-        "EN": "4.Tap Redeem.",
-        "AR": "٤- أنقر على استبدال.",
-        "ID": "4. Klik \"Redeem\""
-    },
-    {
-        "EN": "Go to PlayStation Network Account, select \"Redeem Codes\", enter the PIN code to complete the recharge.",
-        "AR": "انتقل إلى حساب شبكة PlayStation وحدد \"رمز إعادة الشحن\" ، وأدخل رمز PIN لإكمال عملية إعادة الشحن.",
-        "ID": "Masuk ke akun PlyaStation Network, pilih \"Redeem Codes\" lalu masukkan kode PIN untuk melakukan pengisian ulang."
-    },
-    {
-        "EN": "You have three channels to redeem:",
-        "AR": "لديك ثلاث قنوات لاسترداد قيمتها:",
-        "ID": "Anda mempunyai 3 channel untuk melakukan penukaran:"
-    },
-    {
-        "EN": "Redeem via the Guide Main Menu/ Add Points Wizard or xbox.com.",
-        "AR": "أعد الشحن من خلال قائمة الدليل الرئيسية / معالج إضافة النقاط أو xbox.com.",
-        "ID": "Tukar melalui Guide Main Menu / Add Points Wizard atau xbox.com"
-    },
-    {
-        "EN": "1. Go to this link Redeem Steam Wallet",
-        "AR": "١- انتقل إلى هذا الرابط Redeem Steam Wallet",
-        "ID": "1. Masuk ke link Redeem Steam Wallet"
-    },
-    {
-        "EN": "2. Login into your Steam account.",
-        "AR": "٢- سجل الدخول إلى حساب Steam الخاص بك.",
-        "ID": "2. Masuk ke akun Steam Wallet Anda"
-    },
-    {
-        "EN": "3. Enter your Steam Wallet card number then click \"Continue\".",
-        "AR": "٣- أدخل رقم بطاقة Steam الخاص بك ثم انقر فوق \"متابعة\".",
-        "ID": "3. Masukkan nomor kartu Steam Wallet Anda dan klik \"Lanjutkan\""
-    },
-    {
-        "EN": "How to check the balance:",
-        "AR": "كيفية التحقق من الرصيد:",
-        "ID": "Cara mengecek pulsa:"
-    },
-    {
-        "EN": "1. Enter *888# to check the balance.",
-        "AR": "١- أدخل * 888 # للتحقق من الرصيد.",
-        "ID": "1. Ketik *888# untuk mengecek pulsa;"
-    },
-    {
-        "EN": "2. Log in Telkomsel's web to check or Log on the operator's APP to check",
-        "AR": "٢- سجل الدخول على الويب Telkomsel للتحقق أو سجل الدخول إلى التطبيق المشغل للتحقق",
-        "ID": "2. Masuk ke akun Telkomsel Anda melalui website atau aplikasi MyTelkomsel"
-    },
-    {
-        "EN": "1. Enter *123# to check the balance.",
-        "AR": "١- أدخل * 123 # للتحقق من الرصيد.",
-        "ID": "1. Ketik *123# untuk mengecek pulsa;"
-    },
-    {
-        "EN": "2. Or enter *123*7*1# to check Quota;",
-        "AR": "٢- أو أدخل * 123 * 7 * 1 # للتحقق من الحصة ؛",
-        "ID": "2. Atau ketik *123*7*1# untuk mengecek kuota;"
-    },
-    {
-        "EN": "3. Log in XL's web to check or log on the operator's APP to check",
-        "AR": "٣- قم بتسجيل الدخول إلى موقع ويب XL للتحقق من مقدم خدمة التطبيق أو سجل الدخول للتحقق منه",
-        "ID": "3. Masuk ke akun XL Anda di melalui website atau aplikasi MyXL"
-    },
-    {
-        "EN": "Log on the operator's APP to check.",
-        "AR": "تسجيل الدخول إلى التطيق المشغل للتحقق.",
-        "ID": "Masuk ke aplikasi operator Anda untuk melakukan pengecekan"
-    },
-    {
-        "EN": "1. Enter *123# to check the balance.",
-        "AR": "١- أدخل * 123 # للتحقق من الرصيد.",
-        "ID": "1. Ketik *123# untuk mengecek pulsa;"
-    },
-    {
-        "EN": "2. Use the SMS: Type USAGE and send to 363.",
-        "AR": "٢- استخدم SMS: اكتب USAGE وأرسل إلى 363.",
-        "ID": "2. Gunakan SMS: ketik USAGE dan kirim ke 363;"
-    },
-    {
-        "EN": "3. Log in Indosat's web to check.",
-        "AR": "٣- قم بتسجيل الدخول في موقع إندوسات للتحقق منه.",
-        "ID": "3. Masuk ke website Indosat untuk melakukan pengecekan"
-    },
-    {
-        "EN": "1. Enter *111# then choose menu check reload.",
-        "AR": "١- أدخل * 111 # ثم اختر إعادة الشحن.",
-        "ID": "1. Ketik *111# dan pilih menu cek pulsa;"
-    },
-    {
-        "EN": "2. Or use the SMS: Type info (spasi) data send to 234.",
-        "AR": "٢- أو استخدام الرسائل القصيرة للتحقق: إرسال (spasi) إلى 234.",
-        "ID": "2. Gunakan SMS: ketik INFO (spasi) DATA, kirim ke 234;"
-    },
-    {
-        "EN": "1. Enter *999 to check the balance.",
-        "AR": "١- أدخل 999* للتحقق من الرصيد.",
-        "ID": "1. Ketik *999# untuk mengecek pulsa;"
-    },
-    {
-        "EN": "2. Or use the SMS: Type CEK send to 999.",
-        "AR": "٢- أو استخدام الرسائل القصيرة: إرسال نوع CEK إلى 999.",
-        "ID": "2. Gunakan SMS: ketik CEK kirim ke 999;"
-    },
-    {
-        "EN": "Log on the operator's APP to check.",
-        "AR": "سجيل الدخول إلى التطبيق المشغل للتحقق.",
-        "ID": "Masuk ke aplikasi operator Anda untuk melakukan pengecekan"
-    },
-    {
-        "EN": "How to Check Internet Quota:",
-        "AR": "كيفية التحقق من حصة الإنترنت",
-        "ID": "Cara mengecek kuota internet: "
-    },
-    {
-        "EN": "1. Type an SMS with the format UL (space) INFO and send it to 3636.",
-        "AR": "١- اكتب رسالة قصيرة بتنسيق UL (مساحة) INFO وأرسلها إلى 3636.",
-        "ID": "1. SMS dengan format UL (spasi) INFO kirim ke 3636"
-    },
-    {
-        "EN": "2. Dial up *888# and press call. Follow the next instruction in the pop up message.",
-        "AR": "٢- اطلب * 888 # واضغط على مكالمة ، ثم اتبع التعليمات التالية في الرسالة المنبثقة.",
-        "ID": "2. Ketik *888# dan tekan panggil. Ikuti panduan berikutnya pada pesan pop-up"
-    },
-    {
-        "EN": "3. Log on MyTelkomsel Application to check.",
-        "AR": "٣- تسجيل الدخول على تطبيق MyTelkomsel للتحقق.",
-        "ID": "3. Masuk ke aplikasi MyTelkomsel untuk melakukan pengecekan"
-    },
-    {
-        "EN": "1. Type SMS with format QUOTA and send SMS to 868.",
-        "AR": "١- اكتب SMS مع تنسيق QUOTA وإرسال الرسائل القصيرة إلى 868.",
-        "ID": "1. SMS dengan format QUOTA dan kirim ke 868"
-    },
-    {
-        "EN": "2. Dial up *123*7# and press call.",
-        "AR": "٢- إضغط على * 123 * 7 # ثم اضغط على مكالمة.",
-        "ID": "2. Ketik *123*7# dan tekan panggil"
-    },
-    {
-        "EN": "3. Log on MyXL app to check.",
-        "AR": "٣- قم بتسجيل الدخول على تطبيق MyXL للتحقق.",
-        "ID": "3. Masuk ke aplikasi MyXL untuk melakukan pengecekan"
-    },
-    {
-        "EN": "1. Type SMS with QUOTA format and send SMS to 123.",
-        "AR": "١- إرسال QUOTA في رسالة قصيرة إلى 123.",
-        "ID": "1. SMS dengan format QUOTA dan kirim ke 123"
-    },
-    {
-        "EN": "2. Dial up *123# and press call.",
-        "AR": "٢- إضغط على *123# واضغط على المكالمة.",
-        "ID": "2. Ketik *123# dan tekan panggil"
-    },
-    {
-        "EN": "3. Log on Axisnet app to check.",
-        "AR": "٣- قم بتسجيل الدخول على تطبيق Axisnet للتحقق.",
-        "ID": "3. Masuk ke aplikasi Axisnet untuk melakukan pengecekan"
-    },
-    {
-        "EN": "1. Type USAGE  and sent to number 363.",
-        "AR": "١- اكتب USAGE وأرسلها إلى الرقم 363.",
-        "ID": "1. Ketik USAGE dan kirim ke 363"
-    },
-    {
-        "EN": "2. Dial up *123# and press call.",
-        "AR": "٢- إضغط على *123# واضغط على الإتصال.",
-        "ID": "2. Ketik *123# dan tekan panggil"
-    },
-    {
-        "EN": "3. Log on MyCare Application to check.",
-        "AR": "٣- قم بتسجيل الدخول على تطبيق MyCare للتحقق.",
-        "ID": "3. Masuk ke aplikasi MyCare untuk melakukan pengecekan"
-    },
-    {
-        "EN": "1. Type SMS with format INFO DATA and send SMS to 234.",
-        "AR": "١- اكتب رسالة قصيرة تحوي INFO DATA وإرسالها إلى 234.",
-        "ID": "1. SMS dengan format INFO DATA dan kirim ke 234"
-    },
-    {
-        "EN": "2. Dial up *111# and press call.",
-        "AR": "٢-اتصال على * 111 # والصحافة.",
-        "ID": "2. Ketik *111# dan tekan panggil"
-    },
-    {
-        "EN": "3. Log on bimaTri app to check.",
-        "AR": "٣- سجل الدخول في bimaTri التطبيق للتحقق.",
-        "ID": "3. Masuk ke aplikasi bimaTri untuk melakukan pengecekan"
-    },
-    {
-        "EN": "Log in Bolt's web or log on MyBolt app to check.",
-        "AR": "سجّل الدخول إلى موقع Bolt أو سجِّل تطبيق MyBolt للتحقق منه.",
-        "ID": "1. Masuk ke website Bolt atau aplikasi MyBolt untuk melakukan pengecekan."
+        "EN": "X is not in our delivery area.",
+        "AR": "X ليس من ضمن مناطق التسليم",
+        "ID": "X tidak terdaftar di area pengiriman Kami.",
+        "FR": "X n'est pas dans notre domaine de livraison."
     }
 ]

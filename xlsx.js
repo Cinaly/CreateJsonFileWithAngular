@@ -1,12 +1,12 @@
 var xl = require('xlsx');
 var fs = require('fs');
 // workbook 对象，指的是整份 Excel 文档。我们在使用 js-xlsx 读取 Excel 文档之后就会获得 workbook 对象。
-var workbook = xl.readFile('./translate.xlsx');
+var workbook = xl.readFile('./H5页面翻译.xlsx');
 // 获取 Excel 中所有表名
 const sheetNames = workbook.SheetNames; // 返回 ['sheet1', 'sheet2']
-console.log(sheetNames);
+
 // 根据表名获取对应某张表
-const worksheet = workbook.Sheets[sheetNames[4]];
+const worksheet = workbook.Sheets[sheetNames[0]];
 //返回json数据
 var jsonData = xl.utils.sheet_to_json(worksheet);
 
@@ -21,25 +21,32 @@ for (var i = 0; i < length; i++) {
         }
     }
 }
-console.log(jsonNameArr);
+
 for (var i = 0; i < length; i++) {
-    jsonObj['EN'][jsonData[i]['EN']] = jsonData[i]['EN'];
+    var jsonKey = jsonData[i]['EN'];
+    var jsonValue = jsonData[i]['EN'];
+    jsonValue = jsonValue.replace(/\bX\b/g, '{value}');
+    
+    jsonObj['EN'][jsonKey] = jsonValue;
     if (jsonData[i]['AR']) {
-        jsonObj['AR'][jsonData[i]['EN']] = jsonData[i]['AR'];
+        jsonObj['AR'][jsonKey] = jsonData[i]['AR'].replace(/\bX\b/g, '{value}');
     }
     if (jsonData[i]['FR']) {
-        jsonObj['FR'][jsonData[i]['EN']] = jsonData[i]['FR'];
+        jsonObj['FR'][jsonKey] = jsonData[i]['FR'].replace(/\bX\b/g, '{value}');
     }
     if (jsonData[i]['TR']) {
-        jsonObj['TR'][jsonData[i]['EN']] = jsonData[i]['TR'];
+        jsonObj['TR'][jsonKey] = jsonData[i]['TR'].replace(/\bX\b/g, '{value}');
     }
     if (jsonData[i]['ID']) {
-        jsonObj['ID'][jsonData[i]['EN']] = jsonData[i]['ID'];
+        jsonObj['ID'][jsonKey] = jsonData[i]['ID'].replace(/\bX\b/g, '{value}');
     }
     if (jsonData[i]['RU']) {
-        jsonObj['RU'][jsonData[i]['EN']] = jsonData[i]['RU'];
+        jsonObj['RU'][jsonKey] = jsonData[i]['RU'].replace(/\bX\b/g, '{value}');
     }
 }
+
+console.log(jsonObj['EN']);
+
 
 fs.writeFile('./json/en.json', JSON.stringify(jsonObj['EN'], null, 4));
 if (jsonObj['AR']) {
