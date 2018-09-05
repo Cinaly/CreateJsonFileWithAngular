@@ -1,7 +1,9 @@
 var xl = require('xlsx');
 var fs = require('fs');
+
+var fileName = './H5页面翻译.xlsx';
 // workbook 对象，指的是整份 Excel 文档。我们在使用 js-xlsx 读取 Excel 文档之后就会获得 workbook 对象。
-var workbook = xl.readFile('./H5页面翻译.xlsx');
+var workbook = xl.readFile(fileName);
 // 获取 Excel 中所有表名
 const sheetNames = workbook.SheetNames; // 返回 ['sheet1', 'sheet2']
 
@@ -67,3 +69,8 @@ if (jsonObj['ID']) {
 if (jsonObj['RU']) {
     fs.writeFile('./json/ru.json', JSON.stringify(jsonObj['RU'], null, 4));
 }
+
+fs.unlink(fileName, function (err) {
+    if (err) return console.log(err);
+    console.log('文件删除成功');
+})
